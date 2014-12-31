@@ -11,4 +11,12 @@ public partial class Registration : System.Web.UI.Page
     {
 
     }
+    protected void DropDownList1_SelectedIndexChanged(object sender, EventArgs e)
+    {
+
+    }
+    protected void Button1_Click(object sender, EventArgs e)
+    {
+        Response.Write("Your registration was successful!");
+    }
 }
