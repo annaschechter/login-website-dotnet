@@ -36,10 +36,12 @@ public partial class Registration : System.Web.UI.Page
     {
         try
         {
+            Guid newGuid = Guid.NewGuid();
             SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["UsersConnectionString"].ConnectionString);
             conn.Open();
-            string insertQuery = "insert into Users (Username, Email, Password, Age) values (@username, @email, @password, @age)";
+            string insertQuery = "insert into Users (Id, Username, Email, Password, Age) values (@id, @username, @email, @password, @age)";
             SqlCommand comm = new SqlCommand(insertQuery, conn);
+            comm.Parameters.AddWithValue("@id", newGuid.ToString());
             comm.Parameters.AddWithValue("@username", TextBoxUsername.Text );
             comm.Parameters.AddWithValue("@email", TextBoxEmail.Text);
             comm.Parameters.AddWithValue("@password", TextBoxPassword.Text);
