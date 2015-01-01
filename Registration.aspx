@@ -14,18 +14,12 @@
             text-align: left;
         }
         .auto-style3 {
-            width: 306px;
-            text-align: right;
-            font-weight: 700;
-        }
-        .auto-style4 {
-            height: 23px;
-            width: 306px;
+            width: 182px;
             text-align: right;
             font-weight: 700;
         }
         .auto-style5 {
-            width: 306px;
+            width: 182px;
             text-align: right;
             font-weight: 700;
             height: 23px;
@@ -38,7 +32,7 @@
             width: 215px;
         }
         .auto-style8 {
-            width: 306px;
+            width: 182px;
             text-align: right;
             font-weight: 700;
             height: 26px;
@@ -54,12 +48,25 @@
         .auto-style11 {
             text-align: left;
         }
+        .auto-style12 {
+            text-align: center;
+        }
+        .auto-style13 {
+            color: #FFFFFF;
+        }
     </style>
 </head>
 <body>
     <form id="form1" runat="server">
-    <div>
+    <div class="auto-style12">
     
+        <div class="auto-style12">
+            <br />
+            <h1><span class="auto-style13"><strong style="color: #000000">Registration page</strong></span></h1>
+            <br />
+            <br />
+            <br />
+        </div>
         <table class="auto-style1">
             <tr>
                 <td class="auto-style8">Username:</td>
@@ -91,7 +98,7 @@
                 </td>
             </tr>
             <tr>
-                <td class="auto-style4">Confirm Password:</td>
+                <td class="auto-style5">Confirm Password:</td>
                 <td class="auto-style7">
                     <asp:TextBox ID="TextBoxConfirmPassword" runat="server" TextMode="Password" Width="180px"></asp:TextBox>
                 </td>
